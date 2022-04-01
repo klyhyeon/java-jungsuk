@@ -16,7 +16,7 @@ public class TestAnything {
         System.out.println(c);
     }
 
-    static void changeInt(int i) {
+    static void changeInt(Integer i) {
         i = 10000;
     }
 
