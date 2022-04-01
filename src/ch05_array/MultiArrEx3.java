@@ -1,4 +1,4 @@
-package ch06_array;
+package ch05_array;
 
 public class MultiArrEx3 {
 
