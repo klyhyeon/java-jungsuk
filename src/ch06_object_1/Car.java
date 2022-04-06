@@ -1,6 +1,9 @@
 package ch06_object_1;
 
-public class Car {
+import ch07_object_2.Architect1;
+import ch07_object_2.Super;
+
+public class Car extends Super {
 
     {
         color = "none";

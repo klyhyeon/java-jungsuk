@@ -1,5 +1,7 @@
 package ch05_array;
 
+import java.io.PrintStream;
+
 public class StringArray {
 
     public static void main(String[] args) {

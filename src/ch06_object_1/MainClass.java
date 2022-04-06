@@ -2,7 +2,6 @@ package ch06_object_1;
 
 public class MainClass {
 
-
     public static void main(String[] args) {
         StaticObject.getObject();
 
@@ -10,9 +9,5 @@ public class MainClass {
         int j = i.length;
 
         Car car = new Car();
-
-    }
-
-    void invokeClassVariable() {
     }
 }
