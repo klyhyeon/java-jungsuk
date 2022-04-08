@@ -1,6 +1,8 @@
 package ch06_object_1;
 
-public class MainClass {
+import ch05_array.DefaultModifier;
+
+public class MainClass extends DefaultModifier {
 
     public static void main(String[] args) {
         StaticObject.getObject();
@@ -9,5 +11,11 @@ public class MainClass {
         int j = i.length;
 
         Car car = new Car();
+
     }
+    void test() {
+        DefaultModifier defaultModifier = new DefaultModifier();
+        this.defaultModifierMethod();
+    }
+
 }
