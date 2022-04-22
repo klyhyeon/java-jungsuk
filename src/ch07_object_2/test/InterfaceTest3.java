@@ -1,10 +1,8 @@
 package ch07_object_2.test;
 
-import org.junit.jupiter.api.Test;
 
 public class InterfaceTest3 {
 
-    @Test
     void interfaceTest3() {
         A a = new A();
         a.methodA();

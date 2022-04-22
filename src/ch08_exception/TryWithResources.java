@@ -1,7 +1,5 @@
 package ch08_exception;
 
-import org.junit.jupiter.api.extension.ExtensionContext;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,10 +7,10 @@ import java.io.IOException;
 public class TryWithResources {
 
     static String firstLineOfFile(String path) throws IOException {
-        BufferedReader br=new BufferedReader(new FileReader(path));
+        BufferedReader br = new BufferedReader(new FileReader(path));
         try {
             return br.readLine();
-        }finally{
+        } finally {
             br.close();
         }
     }
@@ -26,25 +24,25 @@ public class TryWithResources {
     public static void main(String[] args) {
         try (Closeableresource cr = new Closeableresource()) {
             cr.exceptionWork(false);
-        } catch(WorkException e) {
+        } catch (WorkException e) {
             e.printStackTrace();
-        } catch(CloseException e) {
+        } catch (CloseException e) {
             e.printStackTrace();
         }
         System.out.println();
         try (Closeableresource cr = new Closeableresource()) {
             cr.exceptionWork(true);
-        } catch(WorkException e) {
+        } catch (WorkException e) {
             e.printStackTrace();
-        } catch(CloseException e) {
+        } catch (CloseException e) {
             e.printStackTrace();
         }
-     }
+    }
 
     static class Closeableresource implements AutoCloseable {
 
         public void exceptionWork(boolean exception) throws WorkException {
-            System.out.println("exceptionWork("+exception+") 가 호출됨");
+            System.out.println("exceptionWork(" + exception + ") 가 호출됨");
 
             if (exception) {
                 throw new WorkException("WorkException 발생!!");
@@ -64,7 +62,7 @@ public class TryWithResources {
         }
     }
 
-   static class CloseException extends Exception {
+    static class CloseException extends Exception {
         CloseException(String msg) {
             super(msg);
         }

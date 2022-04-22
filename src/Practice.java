@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Test;
 
 public class Practice {
 
@@ -34,9 +33,8 @@ public class Practice {
 
     }
 
-    @Test
     void test() {
         Child c = new Child();
-        System.out.println("x="+c.getX());
+        System.out.println("x=" + c.getX());
     }
 }
