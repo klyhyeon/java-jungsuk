@@ -27,7 +27,8 @@ public class PeriodAndDurationPrac {
         int hour = tmpTime.getHour();
         System.out.println(hour);
 
-        long hoursUntil = LocalTime.now().until(LocalTime.now().plusHours(11), ChronoUnit.HOURS);
+        long hoursUntil = LocalTime.now().until(
+                LocalTime.now().plusHours(11), ChronoUnit.HOURS);
         long chronoHours = ChronoUnit.HOURS.between(LocalTime.now(), LocalTime.now().plusHours(11));
         System.out.println(hoursUntil);
         System.out.println(chronoHours);
