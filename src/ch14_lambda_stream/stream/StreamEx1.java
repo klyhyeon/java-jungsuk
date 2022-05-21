@@ -100,10 +100,13 @@ public class StreamEx1 {
         List<String> names = studentStream.map(Student::getName)
                 .collect(Collectors.toList());
         System.out.println(names);
-        Map<String,Student> studentsMap = studentStream1.collect(Collectors.toMap(Student::getName, s -> s));
+        Map<String,Student> studentsMap = studentStream1.collect(
+                Collectors.toMap(Student::getName, s -> s)
+        );
         System.out.println(studentsMap);
-        Student[] studentArr = studentStream2.toArray(Student[]::new);
-//        Student[] studentArr = studentStream2.toArray(s -> new Student[s]);
-        System.out.println(studentArr.length);
+//        Student[] studentArr = studentStream2.toArray(new Student[5]);
+//        Student[] studentArr = studentStream2.toArray(Student[]::new);
+//        System.out.println(studentArr.length);
+
     }
 }
