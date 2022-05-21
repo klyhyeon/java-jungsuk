@@ -15,7 +15,6 @@ class MyThread extends Thread {
 
     @Override
     public void run() {
-//        super.run();
         try {
             System.out.println("run MyThread");
             throw new RuntimeException("MyThread exception");
